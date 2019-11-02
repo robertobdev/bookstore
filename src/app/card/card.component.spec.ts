@@ -35,7 +35,7 @@ describe('CardComponent', () => {
     const arrage = {
       expect: {
         id: 1,
-        price: '35',
+        price: 'R$ 35',
         title: 'O Senhor dos Anéis: A Sociedade do Anel',
         description: '',
         author: 'J.R.R. Tolkien',

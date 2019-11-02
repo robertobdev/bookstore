@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  padding: 15px;
+  margin: 15px;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+h4, h5 {
+  margin: 10px 0;
+}
