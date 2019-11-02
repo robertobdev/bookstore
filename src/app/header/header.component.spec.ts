@@ -28,4 +28,13 @@ describe('HeaderComponent', () => {
     expect(button).toBeTruthy();
   });
 
+  it('should click a button and dispatch a function', () => {
+    const spyGoTo = spyOn(component, 'goTo').and.callThrough();
+    const button = fixture.debugElement.query(By.css('button')).nativeElement;
+    button.click();
+    fixture.detectChanges();
+    
+    expect(spyGoTo).toHaveBeenCalled();
+  });
+
 });
