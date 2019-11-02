@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { CustomMaterialModule } from './custom-material.module';
+import { CustomMaterialModule } from './shared/custom-material.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
