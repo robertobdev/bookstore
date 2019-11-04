@@ -8,6 +8,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './shared/custom-material.module';
 import { CardComponent } from './card/card.component';
 import { ListCardsComponent } from './list-cards/list-cards.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { ListCardsComponent } from './list-cards/list-cards.component';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
