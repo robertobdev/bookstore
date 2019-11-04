@@ -4,18 +4,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CustomMaterialModule } from './shared/custom-material.module';
 import { CardComponent } from './card/card.component';
+import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        CustomMaterialModule,
+        AppModule
       ],
       declarations: [
-        AppComponent,
-        HeaderComponent,
-        CardComponent
       ],
     }).compileComponents();
   }));
