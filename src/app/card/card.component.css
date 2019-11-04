@@ -5,7 +5,8 @@
   align-items: center;
   border: 1px solid gray;
   border-radius: 10px;
-  width: fit-content;
+  flex: 1;
+  max-width: 21.5em;
 }
 
 img {
