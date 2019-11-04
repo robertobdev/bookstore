@@ -1,1 +1,1 @@
-<app-card *ngFor="let book of books" [book]="book" ></app-card>
+<app-card *ngFor="let book of books" [book]="book" (addToCart)="reciverBookToAdd($event)"></app-card>
