@@ -9,13 +9,15 @@ import { CustomMaterialModule } from './shared/custom-material.module';
 import { CardComponent } from './card/card.component';
 import { ListCardsComponent } from './list-cards/list-cards.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CardComponent,
-    ListCardsComponent
+    ListCardsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
