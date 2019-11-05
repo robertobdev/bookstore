@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-list-cards',
@@ -42,7 +43,7 @@ export class ListCardsComponent implements OnInit {
       image: 'https://images-na.ssl-images-amazon.com/images/I/71%2B4uDgt8JL.jpg'
     },
   ];
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar, private booksService: BooksService) { }
 
   reciverBookToAdd(book) {
     let cart: any = JSON.parse(sessionStorage.getItem('cart'));
@@ -53,6 +54,8 @@ export class ListCardsComponent implements OnInit {
     this.snackBar.open('Livro adicionado com sucesso.', 'Ok', {
       duration: 2000,
     });
+
+    this.booksService.getCountBooks();
   }
 
   ngOnInit() {

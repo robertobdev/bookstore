@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  countBooks = 0;
 
-  constructor() { }
+  constructor(private bookService: BooksService) {
+    this.bookService.booksCount.subscribe((count) => {
+      this.countBooks = count;
+    });
+  }
 
   ngOnInit() {
   }
