@@ -8,11 +8,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input() book;
+  @Input() isCart;
   @Output() addToCart: EventEmitter<any> = new EventEmitter();
+  @Output() removeBook: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+    this.isCart = false;
     this.book = {
       id: 1,
       price: 35.00,
@@ -25,5 +28,9 @@ export class CardComponent implements OnInit {
 
   addingToCart() {
     this.addToCart.emit(this.book);
+  }
+
+  removingBook() {
+    this.removeBook.emit(this.book);
   }
 }

@@ -2,8 +2,12 @@
 <div>
   <h4>{{book?.title}}</h4>
   <h5>R$ {{book?.price}}</h5>
-  <button mat-raised-button (click)="addingToCart()" aria-label="Icone de Carrinho" color="primary">
+  <button *ngIf="!isCart" mat-raised-button (click)="addingToCart()" aria-label="Icone de Carrinho" color="primary">
     <mat-icon>shopping_cart</mat-icon>
     Adicionar no carrinho
+  </button>
+  <button *ngIf="isCart" mat-raised-button (click)="removingBook()" aria-label="Icone de Carrinho" color="primary">
+    <mat-icon>shopping_cart</mat-icon>
+    Remover do carrinho
   </button>
 </div>
