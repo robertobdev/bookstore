@@ -1,0 +1,17 @@
+.container {
+  margin: 5%;
+}
+
+.booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  font-size: 2em;
+}
+
+button {
+  height: 80%;
+}

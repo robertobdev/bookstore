@@ -1,5 +1,7 @@
-<div>
-  <p>Carrinho</p>
-  <button (click)="booking()">Reservar</button>
+<div class="container">
+  <div class="booking">
+    <p>Carrinho</p>
+    <button mat-raised-button (click)="booking()">Reservar</button>
+  </div>
+  <app-card *ngFor="let book of cart" [book]="book" [isCart]="true" (removeBook)="reciverBookToRemove($event)"></app-card>
 </div>
-<app-card *ngFor="let book of cart" [book]="book" [isCart]="true" (removeBook)="reciverBookToRemove($event)"></app-card>
