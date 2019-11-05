@@ -1,1 +1,5 @@
-<p>Carrinho</p>
+<div>
+  <p>Carrinho</p>
+  <button (click)="booking()">Reservar</button>
+</div>
+<app-card *ngFor="let book of cart" [book]="book" [isCart]="true" (removeBook)="reciverBookToRemove($event)"></app-card>
