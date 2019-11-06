@@ -25,7 +25,8 @@ export class CartComponent implements OnInit {
 
   booking() {
     let dialog = this.modal.open(UserModalComponent, {
-
+      height: '500px',
+      width: '500px',
     });
   }
 }

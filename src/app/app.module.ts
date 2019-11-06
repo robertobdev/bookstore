@@ -11,6 +11,8 @@ import { ListCardsComponent } from './list-cards/list-cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { UserModalComponent } from './user-modal/user-modal.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { PhoneMaskDirective } from './shared/directives/phone-mask.directive';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { UserModalComponent } from './user-modal/user-modal.component';
     CardComponent,
     ListCardsComponent,
     CartComponent,
-    UserModalComponent
+    UserModalComponent, PhoneMaskDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     CustomMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [ ],
   bootstrap: [AppComponent],
