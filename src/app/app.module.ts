@@ -10,6 +10,7 @@ import { CardComponent } from './card/card.component';
 import { ListCardsComponent } from './list-cards/list-cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { UserModalComponent } from './user-modal/user-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CartComponent } from './cart/cart.component';
     HeaderComponent,
     CardComponent,
     ListCardsComponent,
-    CartComponent
+    CartComponent,
+    UserModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,9 @@ import { CartComponent } from './cart/cart.component';
     HttpClientModule
   ],
   providers: [ ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    UserModalComponent
+  ]
 })
 export class AppModule { }

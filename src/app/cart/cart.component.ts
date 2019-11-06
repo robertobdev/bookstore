@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../books.service';
+import { MatDialog } from '@angular/material';
+import { UserModalComponent } from '../user-modal/user-modal.component';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +10,7 @@ import { BooksService } from '../books.service';
 })
 export class CartComponent implements OnInit {
   cart = [];
-  constructor(private bookService: BooksService) { }
+  constructor(private bookService: BooksService, private modal: MatDialog) { }
 
   ngOnInit() {
     this.bookService.getCountBooks();
@@ -22,6 +24,8 @@ export class CartComponent implements OnInit {
   }
 
   booking() {
-    
+    let dialog = this.modal.open(UserModalComponent, {
+
+    });
   }
 }
