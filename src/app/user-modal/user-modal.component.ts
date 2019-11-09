@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { ValidateEmail } from '../shared/validators/email.validator';
 import { ValidateRequired } from '../shared/validators/required.validator';
 import { ValidatePhone } from '../shared/validators/phonel.validator';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-user-modal',
@@ -45,7 +46,7 @@ export class UserModalComponent implements OnInit {
     'Literatura de Guerra',
   ];
 
-  constructor() {
+  constructor(private service: BooksService) {
     this.registerForm = new FormGroup({
       name: new FormControl(null, [ValidateRequired]),
       email: new FormControl(null, [ValidateEmail.valid, ValidateRequired]),
@@ -58,6 +59,16 @@ export class UserModalComponent implements OnInit {
   }
 
   save() {
-
+    const dados = this.registerForm.getRawValue();
+    this.service.salvarUsuario(dados).then((funcionario) => {
+      this.registerForm.reset();
+      this.registerForm.markAsPristine();
+      console.log(funcionario);
+    }).catch(err => {
+      this.registerForm.reset();
+      this.registerForm.markAsPristine();
+      this.registerForm.;
+    });
+    console.log(dados);
   }
 }

@@ -19,4 +19,11 @@ export class BooksService {
     const count: any = JSON.parse(sessionStorage.getItem('cart')).length;
     this.booksCount.next(count);
   }
+
+  salvarUsuario(dadosDoUsuario) {
+    // tslint:disable-next-line: quotemark
+    dadosDoUsuario = { "name": "cso ntm", "salary": "123", "age": "23" };
+   // tslint:disable-next-line: align
+   return this.http.post('http://dummy.restapiexample.com/api/v1/create', dadosDoUsuario).toPromise();
+  }
 }

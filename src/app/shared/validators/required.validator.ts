@@ -4,7 +4,7 @@ export function ValidateRequired(control: AbstractControl) {
   if (!control.value || control.value === '') {
     return {
       validate: false,
-      message: 'Campo obrigatório'
+      message: 'Obrigatorio'
     };
   }
 
